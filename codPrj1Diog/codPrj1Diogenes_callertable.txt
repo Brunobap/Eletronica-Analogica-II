@@ -1,0 +1,17 @@
+main
+	leituraAD
+		word2double
+			NRM3232
+				RES032
+				SETFUN32
+				FIXSIGN32
+	Lcd_Init
+		Delay_5500us
+		Delay_1us
+	Lcd_Out_CP
+		Lcd_Chr_CP
+			Lcd_Cmd
+				Delay_1us
+				Delay_5500us
+				Delay_50us
+interrupt

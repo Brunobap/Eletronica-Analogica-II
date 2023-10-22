@@ -1,0 +1,11 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F84A -DL -O11111114 -fo8 -N"E:\Downloads\prj5\prj5.mcppi" -SP"E:\Program Files\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"E:\Program Files\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"E:\Downloads\prj5\" -IP"E:\Program Files\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" "prj5.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl"	 
+hint: 0	1139	Available RAM: 52 [bytes], Available ROM: 1024 [bytes]	 
+diagnostics: 0	122	Compilation Started	stdbool.h
+diagnostics: 98	123	Compiled Successfully	prj5.c
+diagnostics: 0	127	All files Compiled in 78 ms	 
+hint: 0	1144	Used RAM (bytes): 9 (17%)  Free RAM (bytes): 43 (83%)	Used RAM (bytes): 9 (17%)  Free RAM (bytes): 43 (83%)
+hint: 0	1144	Used ROM (program words): 249 (24%)  Free ROM (program words): 775 (76%)	Used ROM (program words): 249 (24%)  Free ROM (program words): 775 (76%)
+diagnostics: 0	125	Project Linked Successfully	prj5.mcppi
+diagnostics: 0	128	Linked in 32 ms	 
+diagnostics: 0	129	Project 'prj5.mcppi' completed: 125 ms	 
+diagnostics: 0	103	Finished successfully: 29 set 2023, 21:48:50	prj5.mcppi

@@ -1,15 +1,15 @@
-0	1	mikroCPIC1618.exe -MSF -DBG -pP18F4550 -DL -O11111114 -fo8 -N"E:\Downloads\codPrj1Diog\codPrj1Diogenes.mcppi" -SP"E:\Program Files\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"E:\Program Files\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"E:\Downloads\codPrj1Diog\" -IP"E:\Program Files\Mikroelektronika\mikroC PRO for PIC\uses\P18\" "codPrj1Diogenes.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F4550 -DL -O11111114 -fo8 -N"C:\Users\bruno\Desktop\Programacao\Gits\Eletronica-Analogica-II\Eletronica-Analogica-II\codPrj1Diog\codPrj1Diogenes.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\bruno\Desktop\Programacao\Gits\Eletronica-Analogica-II\Eletronica-Analogica-II\codPrj1Diog\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" "codPrj1Diogenes.c" "cod2.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
 hint: 0	1139	Available RAM: 2027 [bytes], Available ROM: 32768 [bytes]	 
 diagnostics: 0	122	Compilation Started	codPrj1Diogenes.c
-warning: 74	1508	Implicit conversion of int to ptr	codPrj1Diogenes.c
-warning: 75	1508	Implicit conversion of int to ptr	codPrj1Diogenes.c
-diagnostics: 92	123	Compiled Successfully	codPrj1Diogenes.c
-hint: 46	1164	Variable 'adc' has been eliminated by optimizer	codPrj1Diogenes.c
-hint: 46	1164	Variable 'y' has been eliminated by optimizer	codPrj1Diogenes.c
-diagnostics: 0	127	All files Compiled in 79 ms	 
+diagnostics: 96	123	Compiled Successfully	codPrj1Diogenes.c
+hint: 48	1164	Variable 'adc' has been eliminated by optimizer	codPrj1Diogenes.c
+hint: 48	1164	Variable 'y' has been eliminated by optimizer	codPrj1Diogenes.c
+diagnostics: 0	122	Compilation Started	cod2.c
+diagnostics: 0	123	Compiled Successfully	cod2.c
+diagnostics: 0	127	All files Compiled in 187 ms	 
 hint: 0	1144	Used RAM (bytes): 11 (1%)  Free RAM (bytes): 2016 (99%)	Used RAM (bytes): 11 (1%)  Free RAM (bytes): 2016 (99%)
-hint: 0	1144	Used ROM (bytes): 756 (2%)  Free ROM (bytes): 32012 (98%)	Used ROM (bytes): 756 (2%)  Free ROM (bytes): 32012 (98%)
+hint: 0	1144	Used ROM (bytes): 588 (2%)  Free ROM (bytes): 32180 (98%)	Used ROM (bytes): 588 (2%)  Free ROM (bytes): 32180 (98%)
 diagnostics: 0	125	Project Linked Successfully	codPrj1Diogenes.mcppi
-diagnostics: 0	128	Linked in 31 ms	 
-diagnostics: 0	129	Project 'codPrj1Diogenes.mcppi' completed: 141 ms	 
-diagnostics: 0	103	Finished successfully: 22 out 2023, 18:29:53	codPrj1Diogenes.mcppi
+diagnostics: 0	128	Linked in 32 ms	 
+diagnostics: 0	129	Project 'codPrj1Diogenes.mcppi' completed: 250 ms	 
+diagnostics: 0	103	Finished successfully: 23 out 2023, 14:47:10	codPrj1Diogenes.mcppi

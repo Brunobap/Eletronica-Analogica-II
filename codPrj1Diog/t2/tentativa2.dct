@@ -463,7 +463,6 @@ epstall_uep7_bit
 epstall_uep8_bit
 epstall_uep9_bit
 equals_double
-estado
 f
 fast
 ferr
@@ -1204,6 +1203,7 @@ strchr
 strcmp
 strcpy
 strcspn
+strini
 strlen
 strncat
 strncmp
@@ -1212,6 +1212,7 @@ strpbrk
 strrchr
 strspn
 strstr
+strtemp
 strtobyte
 strtofloat
 strtoint
@@ -1300,9 +1301,6 @@ tblptrh
 tblptrl
 tblptru
 tempatual
-tempideal
-tempmargem
-texto
 tmr0h
 tmr0ie
 tmr0ie_bit

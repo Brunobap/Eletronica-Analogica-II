@@ -1,6 +1,42 @@
-#line 1 "D:/Programacao/Eletronica-Analogica-II/codPrj1Diog/t2/tentativa2.c"
+#line 1 "C:/Users/bruno/Desktop/Programacao/Gits/Eletronica-Analogica-II/Eletronica-Analogica-II/codPrj1Diog/t2/tentativa2.c"
+#line 1 "c:/users/public/documents/mikroelektronika/mikroc pro for pic/include/stdio.h"
+#line 1 "c:/users/public/documents/mikroelektronika/mikroc pro for pic/include/stdlib.h"
 
 
+
+
+
+
+
+ typedef struct divstruct {
+ int quot;
+ int rem;
+ } div_t;
+
+ typedef struct ldivstruct {
+ long quot;
+ long rem;
+ } ldiv_t;
+
+ typedef struct uldivstruct {
+ unsigned long quot;
+ unsigned long rem;
+ } uldiv_t;
+
+int abs(int a);
+float atof(char * s);
+int atoi(char * s);
+long atol(char * s);
+div_t div(int number, int denom);
+ldiv_t ldiv(long number, long denom);
+uldiv_t uldiv(unsigned long number, unsigned long denom);
+long labs(long x);
+int max(int a, int b);
+int min(int a, int b);
+void srand(unsigned x);
+int rand();
+int xtoi(char * s);
+#line 6 "C:/Users/bruno/Desktop/Programacao/Gits/Eletronica-Analogica-II/Eletronica-Analogica-II/codPrj1Diog/t2/tentativa2.c"
 sbit LED at RD2_bit;
 
 
@@ -20,10 +56,10 @@ sbit LCD_D5_Direction at TRISC.B4;
 sbit LCD_D4_Direction at TRISC.B2;
 
 
-unsigned int tempAtual, tempIdeal, tempMargem;
+unsigned int tempAtual;
 
-short estado, contagem;
-unsigned char * texto;
+short contagem;
+unsigned char * strTemp[7], strIni;
 
 
 
@@ -33,12 +69,7 @@ unsigned char * texto;
 
 
 void main() {
-
- estado = 1;
-
-
- tempIdeal = 150;
- tempMargem = 152;
+ strIni = "Temp atual:";
 
 
  TRISA = 0x01;
@@ -55,20 +86,12 @@ void main() {
  GIE_bit = 1;
  PEIE_bit = 1;
  TMR1IE_bit = 1;
- INT0IE_bit = 1;
- INT1IE_bit = 1;
-
-
 
 
  TMR1IF_bit = 1;
- INT0IF_bit = 1;
- INT1IF_bit = 1;
 }
 
 void interrupt(){
-
- if (TMR1IF_bit){
  TMR1ON_bit = 0;
  TMR1IF_bit = 0;
 
@@ -77,39 +100,24 @@ void interrupt(){
 
  else {
  contagem = 100;
- tempAtual = ADC_Get_Sample(0);
+ ADC_Read(0);
+ tempAtual = ADRES/2.025;
+ IntToStr(tempAtual, strTemp);
 
- if (tempAtual < tempIdeal) LED = 1;
 
- else if (tempAtual > tempMargem) LED = 0;
+ if (tempAtual <  150 ) LED = 1;
+
+ else if (tempAtual >  152 ) LED = 0;
+
+ Lcd_Out(0,1,"T. atual:");
+ Lcd_Out(0,10, strTemp);
+
+ if (LED) Lcd_Out(2,1,"Ligado   ");
+ else Lcd_Out(2,1,"Desligado");
  }
+
 
  TMR1H = 0;
  TMR1L = 0;
  TMR1ON_bit = 1;
-
-
- } else if (INT0IF_bit){
- estado = -estado;
- if (estado > 0) Lcd_Out(2,1,"Ligado");
- else Lcd_Out(2,1,"Desligado");
- INT0IF_bit = 0;
-
-
- } else {
-
- if (tempIdeal==150) {
- tempIdeal = 164;
- tempMargem = 168;
- Lcd_Out(2,11,"80oC");
-
-
- } else {
- tempIdeal = 150;
- tempMargem = 152;
- Lcd_Out(2,11,"72oC");
- }
-
- INT1IF_bit = 0;
- }
 }

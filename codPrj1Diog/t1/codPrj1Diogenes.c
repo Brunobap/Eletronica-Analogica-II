@@ -4,7 +4,7 @@ sbit LED at RD2_bit;
 
 // Setar os pinos do lcd
 // Lcd pinout settings
-sbit LCD_RS at RB5_bit;
+/*sbit LCD_RS at RB5_bit;
 sbit LCD_EN at RB4_bit;
 sbit LCD_D7 at RB3_bit;
 sbit LCD_D6 at RB2_bit;
@@ -17,7 +17,7 @@ sbit LCD_EN_Direction at TRISB.B4;
 sbit LCD_D7_Direction at TRISB.B3;
 sbit LCD_D6_Direction at TRISB.B2;
 sbit LCD_D5_Direction at TRISB.B1;
-sbit LCD_D4_Direction at TRISB.B0;
+sbit LCD_D4_Direction at TRISB.B0;  */
 
 #include <stdio.h>
 #define _XTAL_FREQ 8000000
@@ -41,7 +41,7 @@ float tempAtual, tempIdeal;
 } */
 
 void main() {
-    tempIdeal = .725;
+    //tempIdeal = .725;
     
      // Configurar o LCD
     //Lcd_Init();

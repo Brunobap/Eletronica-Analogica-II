@@ -1,0 +1,19 @@
+main
+	__CC2DW
+	ADC_Init
+	Lcd_Init
+		Delay_5500us
+		Delay_1us
+interrupt
+	ADC_Get_Sample
+		Delay_22us
+	Lcd_Out
+		Lcd_Cmd
+			Delay_1us
+			Delay_5500us
+			Delay_50us
+		Lcd_Chr_CP
+			Lcd_Cmd
+				Delay_1us
+				Delay_5500us
+				Delay_50us

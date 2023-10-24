@@ -1,4 +1,4 @@
-#line 1 "C:/Users/bruno/Desktop/Programacao/Gits/Eletronica-Analogica-II/Eletronica-Analogica-II/codPrj1Diog/cod2proj.c"
+#line 1 "D:/Programacao/Eletronica-Analogica-II/codPrj1Diog/cod2proj.c"
 void main() {
  RCON = 0;
 

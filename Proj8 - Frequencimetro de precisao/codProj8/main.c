@@ -50,12 +50,12 @@ void interrupt() {
           TMR1ON_bit = 0;        // Para a contagem do Timer1
           LED = !LED;            // Altera o LED, para mostrar o tempo da contagem
           
-          intFreq = valHi*256+valLo;
+          intFreq = valHi*256 + valLo; // Calcula o valor inteiro da frequência
           
           Lcd_Out(0,3,"FREQUENCIA:");// Escreve as palavras constantes no LCD
           Lcd_Out(2,10,"Hz");
           
-          IntToStr(intFreq,strFreq);  // Transforma o valor do Timer1 em String
+          IntToStr(intFreq,strFreq);       // Transforma o valor do Timer1 em String
           Lcd_Out(2,3,strFreq);           // Escreve a frequência no display
 
           TMR1H = 0;        // Reinicia o contador do Timer1

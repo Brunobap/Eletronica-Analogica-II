@@ -1,7 +1,4 @@
 
-#include <stdio.h>
-#include <stdlib.h>
-
 // Setar pino do LED/forno
 sbit LED at RD2_bit;
 
@@ -31,8 +28,6 @@ unsigned char * strTemp[7], strIni;
 // Temperatura | Convertido
 // 72°C        | 150
 // 75°C        | 152
-#define tempIdeal 150
-#define tempMargem 152
 
 void main() {
      strIni = "Temp atual:";
@@ -71,9 +66,9 @@ void interrupt(){
         IntToStr(tempAtual, strTemp);
 
         // Temperatura abaixo do ideal, liga o forno
-        if (tempAtual < tempIdeal) LED = 1;
+        if (tempAtual < 72) LED = 1;
         // Temperatura já passou de uma margem estável, pode desligar o forno
-        else if (tempAtual > tempMargem) LED = 0;
+        else if (tempAtual > 75) LED = 0;
 
         Lcd_Out(0,1,"T. atual:");
         Lcd_Out(0,10, strTemp);

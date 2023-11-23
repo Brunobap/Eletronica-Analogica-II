@@ -1,42 +1,6 @@
-#line 1 "C:/Users/bruno/Desktop/Programacao/Gits/Eletronica-Analogica-II/Eletronica-Analogica-II/codPrj1Diog/t2/tentativa2.c"
-#line 1 "c:/users/public/documents/mikroelektronika/mikroc pro for pic/include/stdio.h"
-#line 1 "c:/users/public/documents/mikroelektronika/mikroc pro for pic/include/stdlib.h"
+#line 1 "D:/Programacao/Eletronica-Analogica-II/codPrj1Diog/t2/tentativa2.c"
 
 
-
-
-
-
-
- typedef struct divstruct {
- int quot;
- int rem;
- } div_t;
-
- typedef struct ldivstruct {
- long quot;
- long rem;
- } ldiv_t;
-
- typedef struct uldivstruct {
- unsigned long quot;
- unsigned long rem;
- } uldiv_t;
-
-int abs(int a);
-float atof(char * s);
-int atoi(char * s);
-long atol(char * s);
-div_t div(int number, int denom);
-ldiv_t ldiv(long number, long denom);
-uldiv_t uldiv(unsigned long number, unsigned long denom);
-long labs(long x);
-int max(int a, int b);
-int min(int a, int b);
-void srand(unsigned x);
-int rand();
-int xtoi(char * s);
-#line 6 "C:/Users/bruno/Desktop/Programacao/Gits/Eletronica-Analogica-II/Eletronica-Analogica-II/codPrj1Diog/t2/tentativa2.c"
 sbit LED at RD2_bit;
 
 
@@ -60,8 +24,6 @@ unsigned int tempAtual;
 
 short contagem;
 unsigned char * strTemp[7], strIni;
-
-
 
 
 
@@ -105,9 +67,9 @@ void interrupt(){
  IntToStr(tempAtual, strTemp);
 
 
- if (tempAtual <  150 ) LED = 1;
+ if (tempAtual < 72) LED = 1;
 
- else if (tempAtual >  152 ) LED = 0;
+ else if (tempAtual > 75) LED = 0;
 
  Lcd_Out(0,1,"T. atual:");
  Lcd_Out(0,10, strTemp);

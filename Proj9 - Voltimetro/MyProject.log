@@ -1,0 +1,7 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F4550 -DL -O11111114 -fo4 -N"D:\Programacao\Eletronica-Analogica-II\Proj9 - Voltimetro\MyProject.mcppi" -SP"D:\Program Files\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"D:\Program Files\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"D:\Programacao\Eletronica-Analogica-II\Proj9 - Voltimetro\" -IP"D:\Program Files\Mikroelektronika\mikroC PRO for PIC\uses\P18\" "proj9Code.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CString.mcl" "__Lib_Conversions.mcl" "__Lib_PWM_c21.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+hint: 0	1139	Available RAM: 2027 [bytes], Available ROM: 32768 [bytes]	 
+diagnostics: 0	122	Compilation Started	proj9Code.c
+error: 36	323	Argument is out of range	proj9Code.c
+warning: 50	1505	Suspicious pointer conversion	proj9Code.c
+warning: 52	1505	Suspicious pointer conversion	proj9Code.c
+error: 0	102	Finished (with errors): 23 nov 2023, 00:50:38	MyProject.mcppi

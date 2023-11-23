@@ -22,7 +22,6 @@ unsigned char* saida[7];
 
 void ADRead() {
      Delay_us(4);
-     ADON_bit = 1;
      GO_DONE_bit = 1;
      Delay_us(4);
      ADLow = ADRESL;
@@ -30,29 +29,31 @@ void ADRead() {
 }
 
 void main() {
+     // Inicia o LCD com a configuração acima e desliga o cursor
      Lcd_Init();
      Lcd_Cmd(_LCD_CURSOR_OFF);
 
-     // Configurar o módulo CCP2 para o PWM
-     /*PWM2_Init(1);
-     PWM2_Set_Duty(128);
-     PWM2_Start();    */
-     CCP2CON = 0b00001111;
-     T2CON =
-     
-     // Passo 1: Configurar o módulo AD
+     // Configurar o módulo AD
      ADCON1 = 0b00001110;
      ADCON0 = 0b00000000;
      ADCON2 = 0b10010100;
+     ADON_bit = 1;        // Liga o módulo de conversão
      
      while (1) {
-           Delay_ms(500);
-           ADRead();
-           ADComp = ADLow + 256*ADHigh;
-           numTensao = ADComp/204.6667;
-           FloatToStr_FixLen(numTensao, saida, 6);
+           ADRead();      // Chama a função de leitura AD
+           ADComp = ADLow + 256*ADHigh;     // Calcula o número inteiro lido da conversão
+           numTensao = ADComp/204.6667;     // Converte para a tensão real com a proporção
+           FloatToStr_FixLen(numTensao, saida, 6); // Transforma o número em real em texto para saída
+
+           // Escreve os textos na tela do LCD
            Lcd_Out(0,5,"TENSAO");
            Lcd_Out(2,4,saida);
            Lcd_Out(2,9," Volts");
+
+           // Controla o PWM do LED
+           PORTB = 0xFF;
+           Delay_ms(500);
+           PORTB = 0x00;
+           Delay_ms(500);
      }
 }

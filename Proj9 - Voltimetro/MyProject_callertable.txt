@@ -7,10 +7,6 @@ main
 		Delay_1us
 		Delay_5500us
 		Delay_50us
-	PWM2_Init
-	PWM2_Set_Duty
-		Mul_16X16_U
-	PWM2_Start
 	ADRead
 	longword2double
 		NRM4032

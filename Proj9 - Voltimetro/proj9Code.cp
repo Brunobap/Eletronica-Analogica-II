@@ -19,14 +19,14 @@ sbit LCD_D4_Direction at TRISD.B4;
 unsigned int ADHigh, ADLow;
 float numTensao;
 unsigned long ADComp;
-unsigned char* saida[7];
+char saida[14];
+
+sbit LED at PORTC.B1;
 
 void ADRead() {
  Delay_us(4);
  GO_DONE_bit = 1;
  Delay_us(4);
- ADLow = ADRESL;
- ADHigh = ADRESH;
 }
 
 void main() {
@@ -34,17 +34,20 @@ void main() {
  Lcd_Init();
  Lcd_Cmd(_LCD_CURSOR_OFF);
 
+ TRISC.B1 = 0;
+
 
  ADCON1 = 0b00001110;
  ADCON0 = 0b00000000;
  ADCON2 = 0b10010100;
  ADON_bit = 1;
 
+
+
  while (1) {
  ADRead();
- ADComp = ADLow + 256*ADHigh;
- numTensao = ADComp/204.6667;
- FloatToStr_FixLen(numTensao, saida, 6);
+ numTensao = ADRES*5.0/1023;
+ sprintf(saida, "%.3f", numTensao);
 
 
  Lcd_Out(0,5,"TENSAO");
@@ -52,9 +55,9 @@ void main() {
  Lcd_Out(2,9," Volts");
 
 
- PORTC = 0xFF;
+ LED = 1;
  Delay_ms(500);
- PORTC = 0x00;
+ LED = 0;
  Delay_ms(500);
  }
 }

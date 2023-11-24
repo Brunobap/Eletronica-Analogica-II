@@ -42,20 +42,21 @@ Count=0
 Count=0
 [Useses]
 File0=Lcd_Constants
-File1=PWM
-File2=Lcd
-File3=Conversions
-File4=C_String
+File1=Lcd
+File2=C_String
+File3=C_Type
+File4=Sprintf
 Count=5
 [INTERRUPT_DEFS]
 VECTOR_MODE=0
 IVT_BASE=00000008
 [EXPANDED_NODES]
-Count=0
+0=MyProject.mcppi
+Count=1
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
 1=System Libraries
-385=PWM
+618=Sprintf
 Count=3
 [PROGRAMMER_TYPE]
 Value=mikroE mikroProg

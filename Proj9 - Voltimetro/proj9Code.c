@@ -54,7 +54,7 @@ void main() {
            Lcd_Out(2,4,saida);
            Lcd_Out(2,9," Volts");
 
-           // Controla o PWM do LED
+           // Controla o LED
            LED = 1;
            Delay_ms(500);
            LED = 0;

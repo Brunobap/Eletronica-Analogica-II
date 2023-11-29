@@ -1,0 +1,12 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F4550 -DL -O11111114 -fo4 -N"E:\Laboratorio\--Gits--\Eletronica-Analogica-II---Microcontroladores\Micro  proj2\codPrj1Diog\t2\tentativa2.mcppi" -SP"E:\Program Files\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"E:\Program Files\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"E:\Laboratorio\--Gits--\Eletronica-Analogica-II---Microcontroladores\Micro  proj2\codPrj1Diog\t2\" -IP"E:\Program Files\Mikroelektronika\mikroC PRO for PIC\uses\P18\" "tentativa2.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CString.mcl" "__Lib_Conversions.mcl" "__Lib_ADC_A_D.mcl" "__Lib_I2C_b10.mcl" "__Lib_PWM_c21.mcl"	 
+hint: 0	1139	Available RAM: 2027 [bytes], Available ROM: 32768 [bytes]	 
+diagnostics: 0	122	Compilation Started	tentativa2.c
+warning: 64	1505	Suspicious pointer conversion	tentativa2.c
+diagnostics: 85	123	Compiled Successfully	tentativa2.c
+diagnostics: 0	127	All files Compiled in 63 ms	 
+hint: 0	1144	Used RAM (bytes): 77 (4%)  Free RAM (bytes): 1950 (96%)	Used RAM (bytes): 77 (4%)  Free RAM (bytes): 1950 (96%)
+hint: 0	1144	Used ROM (bytes): 2393 (7%)  Free ROM (bytes): 30375 (93%)	Used ROM (bytes): 2393 (7%)  Free ROM (bytes): 30375 (93%)
+diagnostics: 0	125	Project Linked Successfully	tentativa2.mcppi
+diagnostics: 0	128	Linked in 47 ms	 
+diagnostics: 0	129	Project 'tentativa2.mcppi' completed: 141 ms	 
+diagnostics: 0	103	Finished successfully: 27 nov 2023, 16:58:46	tentativa2.mcppi

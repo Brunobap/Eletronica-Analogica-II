@@ -1,0 +1,11 @@
+main
+	Lcd_Init
+		Delay_5500us
+		Delay_1us
+	leituraAD
+		word2double
+			NRM3232
+				RES032
+				SETFUN32
+				FIXSIGN32
+interrupt_low

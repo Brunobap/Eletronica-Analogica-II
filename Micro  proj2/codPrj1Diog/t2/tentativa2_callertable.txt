@@ -1,0 +1,31 @@
+main
+	ADC_Init
+	PWM1_Init
+	PWM1_Start
+	I2C1_Init
+	I2C1_Start
+		I2C1_Is_Idle
+		____DoIFC
+	I2C1_Wr
+		____DoIFC
+	I2C1_Stop
+interrupt
+	ADC_Read
+		Delay_22us
+	word2double
+		NRM3232
+			RES032
+			SETFUN32
+			FIXSIGN32
+	Div_32x32_FP
+		SETFDZ32
+		RES032
+		SETFOV32
+		SETFUN32
+	double2word
+		SETIOV3224
+	IntToStr
+		WordToStr
+			Div_16X16_U
+	PWM1_Set_Duty
+		Mul_16X16_U
